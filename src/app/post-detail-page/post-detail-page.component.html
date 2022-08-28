@@ -1,0 +1,14 @@
+<app-breadcrumb [listItems]="['Home Page']"></app-breadcrumb>
+<div class="post" *ngIf="postItem">
+  <div class="body">
+    <h4 class="title">{{ postItem.title }}</h4>
+    <p class="text">{{ postItem.description }}</p>
+  </div>
+  <div class="footer">
+    <div class="info">
+      <p class="author">{{ postItem.author }}</p>
+      <p class="date">{{ postItem.date }}</p>
+    </div>
+    <p class="tags">Tags: <span>foo</span><span>bar</span><span>baz</span></p>
+  </div>
+</div>

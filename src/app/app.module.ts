@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { CategoryPageComponent } from './category-page/category-page.component';
 import { PostItemComponent } from './post-item/post-item.component';
 import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
+import { PostDetailPageComponent } from './post-detail-page/post-detail-page.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
     CategoryPageComponent,
     PostItemComponent,
     BreadcrumbComponent,
+    PostDetailPageComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
