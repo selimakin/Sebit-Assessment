@@ -12,6 +12,7 @@ import { CategoryPageComponent } from './category-page/category-page.component';
 import { PostItemComponent } from './post-item/post-item.component';
 import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 import { PostDetailPageComponent } from './post-detail-page/post-detail-page.component';
+import { SearchResultsPageComponent } from './search-results-page/search-results-page.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { PostDetailPageComponent } from './post-detail-page/post-detail-page.com
     PostItemComponent,
     BreadcrumbComponent,
     PostDetailPageComponent,
+    SearchResultsPageComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],

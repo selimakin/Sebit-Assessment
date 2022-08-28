@@ -1,7 +1,10 @@
 <div class="search">
   <h2 class="title">How can we help you?</h2>
-  <form class="form">
-    <img src="../../assets/icons/search.svg" />
+  <form class="form" (ngSubmit)="onFormSubmit(searchForm)" #searchForm="ngForm">
+    <img
+      src="../../assets/icons/search.svg"
+      (click)="onFormSubmit(searchForm)"
+    />
     <input
       class="searchInput"
       type="text"

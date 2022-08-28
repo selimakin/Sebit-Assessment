@@ -15,6 +15,13 @@ export class PostsService extends BaseService {
     super(base.http);
   }
 
+  public getAllPosts() {
+    return this.base
+      .getReq<PostItem[]>('/posts')
+      .pipe(map((posts) => this.sortPostsByDate(posts)))
+      .subscribe((sortedPosts) => (this.allPosts = sortedPosts));
+  }
+
   public getPosts(id: number) {
     return this.base
       .getReq<PostItem[]>('/posts?category_id=' + id)
@@ -30,5 +37,14 @@ export class PostsService extends BaseService {
       return +new Date(b.date) - +new Date(a.date);
     });
     return posts;
+  }
+
+  public filterPosts(filterKey: string) {
+    const filteredPosts = this.allPosts.filter((post) => {
+      return (
+        post.title.includes(filterKey) || post.description.includes(filterKey)
+      );
+    });
+    this.filteredPosts.next(filteredPosts);
   }
 }

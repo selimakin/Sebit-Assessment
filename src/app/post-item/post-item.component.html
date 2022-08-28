@@ -1,6 +1,6 @@
 <div class="post">
   <div class="post-body">
-    <h5 class="post-title" [routerLink]="['post', post.id]">
+    <h5 class="post-title" [routerLink]="['/post', post.id]">
       {{ post.title }}
     </h5>
     <p class="post-text" *ngIf="post.description.length <= 280">
@@ -8,7 +8,7 @@
     </p>
     <p class="post-text" *ngIf="post.description.length > 280">
       {{ post.description.slice(0, 280) + "..." }}
-      <a class="read-more" href="" [routerLink]="['post', post.id]"
+      <a class="read-more" href="" [routerLink]="['/post', post.id]"
         >read more</a
       >
     </p>

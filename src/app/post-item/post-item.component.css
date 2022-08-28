@@ -7,6 +7,8 @@
 
 .post-title {
   color: #583abc;
+  cursor: pointer;
+  display: inline-block;
 }
 
 .post-footer {
