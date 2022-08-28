@@ -1,0 +1,43 @@
+.search {
+  background-color: #583abc;
+  padding: 90px 0;
+}
+
+.title {
+  color: white;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.form {
+  position: relative;
+  max-width: 1020px;
+  background-color: #7961c9;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+
+.form img {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(50%, -50%);
+  cursor: pointer;
+}
+
+.searchInput {
+  color: white;
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  padding: 16px 0 16px 54px;
+}
+
+.searchInput:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #412a88;
+}
+
+::placeholder {
+  color: white;
+}
