@@ -11,18 +11,31 @@ import { PostItem } from '../post-item/post-item.component';
 export class SearchResultsPageComponent implements OnInit {
   filteredPosts: Array<PostItem> = [];
   filterKey!: string;
+  shouldSet = true;
 
   constructor(
     private route: ActivatedRoute,
     private postsService: PostsService
-  ) {}
+  ) {
+    const filteredPostsFromLocalStorage = JSON.parse(
+      localStorage.getItem('filteredPosts')!
+    );
+    if (filteredPostsFromLocalStorage) {
+      this.shouldSet = false;
+      this.filteredPosts = filteredPostsFromLocalStorage;
+    }
+  }
 
   ngOnInit(): void {
+    this.postsService.filteredPosts.subscribe((posts) => {
+      if (this.shouldSet) {
+        this.filteredPosts = posts;
+        localStorage.setItem('filteredPosts', JSON.stringify(posts));
+      }
+    });
     this.route.queryParams.subscribe((params: Params) => {
       this.filterKey = params['q'];
-    });
-    this.postsService.filteredPosts.subscribe((posts) => {
-      this.filteredPosts = posts;
+      this.shouldSet = true;
     });
   }
 }
