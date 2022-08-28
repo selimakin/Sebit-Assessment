@@ -12,3 +12,10 @@
 .title {
   color: #583abc;
 }
+
+@media (max-width: 345px) {
+  .item {
+    padding: 15px;
+    gap: 15px;
+  }
+}

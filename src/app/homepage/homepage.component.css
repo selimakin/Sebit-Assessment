@@ -1,13 +1,13 @@
 .categories-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  justify-items: center;
   gap: 30px;
   margin: 40px auto;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 815px) {
   .categories-container {
     grid-template-columns: 1fr;
-    justify-items: center;
   }
 }

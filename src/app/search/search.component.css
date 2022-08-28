@@ -36,6 +36,7 @@
 .searchInput:focus {
   outline: none;
   box-shadow: 0 0 0 2px #412a88;
+  border-radius: 4px;
 }
 
 ::placeholder {
@@ -45,5 +46,11 @@
 @media (max-width: 1050px) {
   .form {
     width: 90%;
+  }
+}
+
+@media (max-width: 815px) {
+  .form {
+    width: 80%;
   }
 }
