@@ -8,6 +8,9 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { CategoryItemComponent } from './homepage/category-item/category-item.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { CategoryPageComponent } from './category-page/category-page.component';
+import { PostItemComponent } from './post-item/post-item.component';
+import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +18,9 @@ import { FormsModule } from '@angular/forms';
     SearchComponent,
     HomepageComponent,
     CategoryItemComponent,
+    CategoryPageComponent,
+    PostItemComponent,
+    BreadcrumbComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],

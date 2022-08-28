@@ -1,0 +1,12 @@
+<app-breadcrumb [listItems]="list"></app-breadcrumb>
+<div class="item" *ngIf="categoryItem && postItems">
+  <img src="../../assets/icons/{{ categoryItem.icon }}" alt="" />
+  <div class="body">
+    <h4 class="title">{{ categoryItem.name }} ({{ postItems.length }})</h4>
+    <p class="text">{{ categoryItem.description }}</p>
+  </div>
+</div>
+<app-post-item
+  [post]="postItem"
+  *ngFor="let postItem of postItems"
+></app-post-item>

@@ -1,0 +1,8 @@
+<ul class="list">
+  <li class="item" *ngFor="let item of listItems; let i = index">
+    <a routerLink="/home">
+      {{ item
+      }}<span class="divisor" *ngIf="i !== listItems.length - 1">/</span>
+    </a>
+  </li>
+</ul>

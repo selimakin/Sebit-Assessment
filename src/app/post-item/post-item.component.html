@@ -1,0 +1,27 @@
+<div class="post">
+  <div class="post-body">
+    <h5 class="post-title" [routerLink]="['post', post.id]">
+      {{ post.title }}
+    </h5>
+    <p class="post-text" *ngIf="post.description.length <= 280">
+      {{ post.description }}
+    </p>
+    <p class="post-text" *ngIf="post.description.length > 280">
+      {{ post.description.slice(0, 280) + "..." }}
+      <a class="read-more" href="" [routerLink]="['post', post.id]"
+        >read more</a
+      >
+    </p>
+  </div>
+  <div class="post-footer">
+    <div class="img-box">
+      <img src="../../assets/images/profile.png" alt="" />
+    </div>
+    <div class="info-box">
+      <p class="author">
+        Written by <strong>{{ post.author }}</strong>
+      </p>
+      <p class="date">{{ post.date | date }}</p>
+    </div>
+  </div>
+</div>
