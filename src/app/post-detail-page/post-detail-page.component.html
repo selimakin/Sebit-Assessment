@@ -7,7 +7,7 @@
   <div class="footer">
     <div class="info">
       <p class="author">{{ postItem.author }}</p>
-      <p class="date">{{ postItem.date }}</p>
+      <p class="date">{{ postItem.date | date: "d MMMM y" }}</p>
     </div>
     <p class="tags">Tags: <span>foo</span><span>bar</span><span>baz</span></p>
   </div>
