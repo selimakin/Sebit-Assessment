@@ -41,3 +41,9 @@
 ::placeholder {
   color: white;
 }
+
+@media (max-width: 1050px) {
+  .form {
+    width: 90%;
+  }
+}

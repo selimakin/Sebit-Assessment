@@ -1,0 +1,14 @@
+.categories-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  max-width: 1020px;
+  margin: 40px auto;
+}
+
+@media (max-width: 800px) {
+  .categories-container {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
